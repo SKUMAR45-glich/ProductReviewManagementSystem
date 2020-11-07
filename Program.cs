@@ -63,6 +63,12 @@ namespace ProductReviewManagementSystem
             //UC3 Retrive Selected Records of the list
 
             management.SelectedRecords(productReviewList);
+
+
+
+            //UC4 Count the Records of the list
+
+            management.RetrieveCountofRecords(productReviewList);
         }
     }
 }
