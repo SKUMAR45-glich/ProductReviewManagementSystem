@@ -65,10 +65,9 @@ namespace ProductReviewManagementSystem
             management.SelectedRecords(productReviewList);
 
 
+            management.RetrieveCountofRecords(productReviewList);         //UC4 Count the Records of the list
 
-            //UC4 Count the Records of the list
-
-            management.RetrieveCountofRecords(productReviewList);
+            management.RetrieveProductIDandReview(productReviewList);     //UC5 Get the Product ID and Records in the list
         }
     }
 }
