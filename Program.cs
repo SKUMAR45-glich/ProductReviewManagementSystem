@@ -57,6 +57,12 @@ namespace ProductReviewManagementSystem
             
             Management management = new Management();
             management.TopRecords(productReviewList);
+
+
+
+            //UC3 Retrive Selected Records of the list
+
+            management.SelectedRecords(productReviewList);
         }
     }
 }
