@@ -7,7 +7,11 @@ namespace ProductReviewManagementSystem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcom to Product Review Management System!");
+
+
+            //UC1 To Display the list of Products
+
 
             List<ProductReview> productReviewList = new List<ProductReview>()
 
@@ -48,6 +52,11 @@ namespace ProductReviewManagementSystem
 
             }
 
+
+            //UC2 Retrieve Top 3 Records of the List
+            
+            Management management = new Management();
+            management.TopRecords(productReviewList);
         }
     }
 }
