@@ -10,6 +10,8 @@ namespace ProductReviewManagementSystem
     {
         public readonly DataTable dataTable = new DataTable();
 
+
+        //Get the Top 3 Records of the Table
         public void TopRecords(List<ProductReview> listProductReview)
         {
             var recordedData = (from productReviews in listProductReview
@@ -23,6 +25,9 @@ namespace ProductReviewManagementSystem
             }
         }
 
+
+
+        //Select the Desired data from the Table
         public void SelectedRecords(List<ProductReview> listProductReview)
         {
             var recordedData = from productReviews in listProductReview
@@ -37,6 +42,9 @@ namespace ProductReviewManagementSystem
             }
         }
 
+
+
+        //Get the total count of the Data and Group it by ProductID 
         public void RetrieveCountofRecords(List<ProductReview> listProductReview)
         {
             var recordedData = listProductReview.GroupBy(x => x.ProductID).Select(x => new { ProductID = x.Key, Count = x.Count() });
@@ -47,6 +55,7 @@ namespace ProductReviewManagementSystem
                 Console.WriteLine(list.ProductID + " " + list.Count);
             }
         }
+
 
 
 
