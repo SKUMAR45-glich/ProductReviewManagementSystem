@@ -64,12 +64,12 @@ namespace ProductReviewManagementSystem
         public void RetrieveProductIDandReview(List<ProductReview> listProductReview)
         {
             var recordedData = from productReviews in listProductReview
-                               select (new { productReviews.ProductID, productReviews.Review });
+                               select ( productReviews.ProductID, productReviews.Review );
 
 
             foreach (var list in recordedData)
             {
-                Console.WriteLine(list.ProductID + " " + list.Review);
+                Console.WriteLine("ProductID "+list.ProductID + " Review " + list.Review);
             }
         }
 
@@ -133,6 +133,23 @@ namespace ProductReviewManagementSystem
             {
                 Console.WriteLine("ProductID: " + list.ProductID + " UserID " + list.UserID
                     + " Rating:- " + list.Rating + " Review:- " + list.Review + " " + " isLike: - " + list.isLike);
+            }
+        }
+
+
+
+        //UC12 Retieve Data with UserID 10 in descending order
+        public void RetrieveDatafromTopRecordwithUserID10(List<ProductReview> listProductReview)
+        {
+            var recordedData = (from productReviews in listProductReview
+                                where productReviews.UserID == 10
+                                orderby productReviews.Rating descending
+                                select productReviews);
+
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID: " + list.ProductID + " USerID " + list.UserID
+                    + " " + "Rating " + list.Rating + "" + "Review " + list.Review + "" + "isLike: " + list.isLike);
             }
         }
     }

@@ -26,11 +26,11 @@ namespace ProductReviewManagementSystem
                 new ProductReview() { ProductID = 9, UserID = 9, Rating = 10, Review = "nice", isLike = true },
                 new ProductReview() { ProductID = 10, UserID = 10, Rating = 8, Review = "nice", isLike = true },
                 new ProductReview() { ProductID = 11, UserID = 10, Rating = 7, Review = "nice", isLike = false },
-                new ProductReview() { ProductID = 12, UserID = 12, Rating = 6, Review = "nice", isLike = true },
-                new ProductReview() { ProductID = 13, UserID = 13, Rating = 5, Review = "nice", isLike = true },
-                new ProductReview() { ProductID = 14, UserID = 14, Rating = 4, Review = "nice", isLike = true },
-                new ProductReview() { ProductID = 1, UserID = 15, Rating = 3, Review = "nice", isLike = true },
-                new ProductReview() { ProductID = 2, UserID = 16, Rating = 2, Review = "nice", isLike = false },
+                new ProductReview() { ProductID = 12, UserID = 10, Rating = 6, Review = "nice", isLike = true },
+                new ProductReview() { ProductID = 13, UserID = 10, Rating = 5, Review = "nice", isLike = true },
+                new ProductReview() { ProductID = 14, UserID = 10, Rating = 4, Review = "nice", isLike = true },
+                new ProductReview() { ProductID = 1, UserID = 10, Rating = 3, Review = "nice", isLike = true },
+                new ProductReview() { ProductID = 2, UserID = 10, Rating = 2, Review = "nice", isLike = false },
                 new ProductReview() { ProductID = 3, UserID = 17, Rating = 10, Review = "nice", isLike = true },
                 new ProductReview() { ProductID = 4, UserID = 18, Rating = 9, Review = "nice", isLike = true },
                 new ProductReview() { ProductID = 1, UserID = 19, Rating = 8, Review = "nice", isLike = true },
@@ -74,7 +74,10 @@ namespace ProductReviewManagementSystem
 
             //management.GetAverageofEachProductID(productReviewList);             // UC10 Get the Average Rating of Each ProductID  
 
-            management.RetrieveDataWithReviewasNice(productReviewList);            //UC11 Retrieve Data with Review as Nice
+            //management.RetrieveDataWithReviewasNice(productReviewList);            //UC11 Retrieve Data with Review as Nice
+
+            management.RetrieveDatafromTopRecordwithUserID10(productReviewList);      //UC12 Retieve Data with UserID 10 in descending order
+
         }
     }
 }
