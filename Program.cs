@@ -58,7 +58,7 @@ namespace ProductReviewManagementSystem
 
 
             Management management = new Management();                       //Instializing Object of class Management
-            
+
 
             //management.TopRecords(productReviewList);                     //UC2 Retrieve Top 3 Records from the list
 
@@ -69,6 +69,8 @@ namespace ProductReviewManagementSystem
             //management.RetrieveProductIDandReview(productReviewList);       //UC5 Get the Product ID and Records in the list
 
             //management.SkipTop5Records(productReviewList);                // UC6 Skip the Top 5 Records of the list
+
+            management.RetrieveDataWithisLikevalueTrue(productReviewList);     //UC7 Retrieve Records with True values from the list
 
         }
     }

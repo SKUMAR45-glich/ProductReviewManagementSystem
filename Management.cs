@@ -87,6 +87,23 @@ namespace ProductReviewManagementSystem
                     + " Rating:- " + list.Rating + " Review:- " + list.Review + " " + " isLike: - " + list.isLike);
             }
         }
+
+
+
+        // To Retrieve data whose isLike value is True
+
+        public void RetrieveDataWithisLikevalueTrue(List<ProductReview> listProductReview)
+        {
+            var recordedData = (from productReviews in listProductReview
+                                where productReviews.isLike == true
+                                select productReviews);
+
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID: " + list.ProductID + " UserID " + list.UserID
+                    + " Rating:- " + list.Rating + " Review:- " + list.Review + " " + " isLike: - " + list.isLike);
+            }
+        }
     }
 
 }
