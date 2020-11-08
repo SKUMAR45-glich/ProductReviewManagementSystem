@@ -64,7 +64,7 @@ namespace ProductReviewManagementSystem
         public void RetrieveProductIDandReview(List<ProductReview> listProductReview)
         {
             var recordedData = from productReviews in listProductReview
-                               select ( new { productReviews.ProductID, productReviews.Review });
+                               select (new { productReviews.ProductID, productReviews.Review });
 
 
             foreach (var list in recordedData)
@@ -111,12 +111,28 @@ namespace ProductReviewManagementSystem
 
         public void GetAverageofEachProductID(List<ProductReview> listProductReview)
         {
-            var recordedData = listProductReview.GroupBy(x => x.ProductID).Select(x => new { ProductID = x.Key, Average = x.Average(x=>x.Rating) });
+            var recordedData = listProductReview.GroupBy(x => x.ProductID).Select(x => new { ProductID = x.Key, Average = x.Average(x => x.Rating) });
 
 
             foreach (var list in recordedData)
             {
-                Console.WriteLine("ProductID: "+list.ProductID + " Average Rating: " + list.Average);
+                Console.WriteLine("ProductID: " + list.ProductID + " Average Rating: " + list.Average);
+            }
+        }
+
+
+        //UC11 Retrieve Data with Review as Nice
+
+        public void RetrieveDataWithReviewasNice(List<ProductReview> listProductReview)
+        {
+            var recordedData = (from productReviews in listProductReview
+                                where productReviews.Review == "nice"
+                                select productReviews);
+
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID: " + list.ProductID + " UserID " + list.UserID
+                    + " Rating:- " + list.Rating + " Review:- " + list.Review + " " + " isLike: - " + list.isLike);
             }
         }
     }

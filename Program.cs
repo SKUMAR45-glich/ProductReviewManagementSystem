@@ -72,9 +72,9 @@ namespace ProductReviewManagementSystem
 
             //management.RetrieveDataWithisLikevalueTrue(productReviewList);     //UC7 Retrieve Records with True values from the list
 
-            management.GetAverageofEachProductID(productReviewList);             // UC10 Get the Average Rating of Each ProductID  
+            //management.GetAverageofEachProductID(productReviewList);             // UC10 Get the Average Rating of Each ProductID  
 
-            
+            management.RetrieveDataWithReviewasNice(productReviewList);            //UC11 Retrieve Data with Review as Nice
         }
     }
 }
