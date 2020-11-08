@@ -47,27 +47,30 @@ namespace ProductReviewManagementSystem
 
             foreach (var list in productReviewList)
             {
-                Console.WriteLine("ProductID: " + list.ProductID + "" + list.UserID
-                    + "" + "Rating:-" + list.Rating + "" + "Review:-" + list.Review + "" + "isLike: - " + list.isLike);
+                Console.WriteLine("ProductID: " + list.ProductID + " UserID " + list.UserID
+                    +  " Rating:- " + list.Rating + " Review:-" + list.Review + " isLike: - " + list.isLike);
 
             }
 
-
+            Console.WriteLine("\n");
             //UC2 Retrieve Top 3 Records of the List
             
             Management management = new Management();
-            management.TopRecords(productReviewList);
+            //management.TopRecords(productReviewList);
 
 
 
             //UC3 Retrive Selected Records of the list
 
-            management.SelectedRecords(productReviewList);
+            //management.SelectedRecords(productReviewList);
 
 
-            management.RetrieveCountofRecords(productReviewList);         //UC4 Count the Records of the list
+            //management.RetrieveCountofRecords(productReviewList);         //UC4 Count the Records of the list
 
-            management.RetrieveProductIDandReview(productReviewList);     //UC5 Get the Product ID and Records in the list
+            //management.RetrieveProductIDandReview(productReviewList);     //UC5 Get the Product ID and Records in the list
+
+            management.SkipTop5Records(productReviewList);
+
         }
     }
 }
