@@ -29,17 +29,17 @@ namespace ProductReviewManagementSystem
                 new ProductReview() { ProductID = 12, UserID = 12, Rating = 6, Review = "nice", isLike = true },
                 new ProductReview() { ProductID = 13, UserID = 13, Rating = 5, Review = "nice", isLike = true },
                 new ProductReview() { ProductID = 14, UserID = 14, Rating = 4, Review = "nice", isLike = true },
-                new ProductReview() { ProductID = 15, UserID = 15, Rating = 3, Review = "nice", isLike = true },
-                new ProductReview() { ProductID = 16, UserID = 16, Rating = 2, Review = "nice", isLike = false },
-                new ProductReview() { ProductID = 17, UserID = 17, Rating = 10, Review = "nice", isLike = true },
-                new ProductReview() { ProductID = 18, UserID = 18, Rating = 9, Review = "nice", isLike = true },
-                new ProductReview() { ProductID = 19, UserID = 19, Rating = 8, Review = "nice", isLike = true },
-                new ProductReview() { ProductID = 20, UserID = 20, Rating = 7, Review = "nice", isLike = true },
-                new ProductReview() { ProductID = 21, UserID = 21, Rating = 6, Review = "nice", isLike = false },
-                new ProductReview() { ProductID = 22, UserID = 22, Rating = 8, Review = "nice", isLike = true },
-                new ProductReview() { ProductID = 23, UserID = 23, Rating = 9, Review = "nice", isLike = false },
-                new ProductReview() { ProductID = 24, UserID = 24, Rating = 15, Review = "nice", isLike = true },
-                new ProductReview() { ProductID = 25, UserID = 25, Rating = 20, Review = "nice", isLike = true }
+                new ProductReview() { ProductID = 1, UserID = 15, Rating = 3, Review = "nice", isLike = true },
+                new ProductReview() { ProductID = 2, UserID = 16, Rating = 2, Review = "nice", isLike = false },
+                new ProductReview() { ProductID = 3, UserID = 17, Rating = 10, Review = "nice", isLike = true },
+                new ProductReview() { ProductID = 4, UserID = 18, Rating = 9, Review = "nice", isLike = true },
+                new ProductReview() { ProductID = 1, UserID = 19, Rating = 8, Review = "nice", isLike = true },
+                new ProductReview() { ProductID = 2, UserID = 20, Rating = 7, Review = "nice", isLike = true },
+                new ProductReview() { ProductID = 3, UserID = 21, Rating = 6, Review = "nice", isLike = false },
+                new ProductReview() { ProductID = 4, UserID = 22, Rating = 8, Review = "nice", isLike = true },
+                new ProductReview() { ProductID = 5, UserID = 23, Rating = 9, Review = "nice", isLike = false },
+                new ProductReview() { ProductID = 6, UserID = 24, Rating = 15, Review = "nice", isLike = true },
+                new ProductReview() { ProductID = 6, UserID = 25, Rating = 20, Review = "nice", isLike = true }
             };
 
 
@@ -70,8 +70,11 @@ namespace ProductReviewManagementSystem
 
             //management.SkipTop5Records(productReviewList);                // UC6 Skip the Top 5 Records of the list
 
-            management.RetrieveDataWithisLikevalueTrue(productReviewList);     //UC7 Retrieve Records with True values from the list
+            //management.RetrieveDataWithisLikevalueTrue(productReviewList);     //UC7 Retrieve Records with True values from the list
 
+            management.GetAverageofEachProductID(productReviewList);             // UC10 Get the Average Rating of Each ProductID  
+
+            
         }
     }
 }
